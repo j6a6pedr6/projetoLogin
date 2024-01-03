@@ -28,7 +28,6 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -37,6 +36,7 @@ main {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.404);
 
+    transform: translate(-50%, -50%);
     transition: 0.3s;
     transition-timing-function: ease;
 }
@@ -62,17 +62,41 @@ main {
     font-size: .8em;
 }
 
+.campo {
+    background-color: #5f2c82;
+    border: 1px solid #5f2c82;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
 .campo > label {
     display: none;
 }
 
-.campo {
-    background-color: #5f2c82;
-    width: 100%;
-    height: 40px;
+.campo > span {
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 40px;
     padding: 5px;
-    margin-top: 7px;
-    border-radius: 5px;
+}
+
+.campo > input {
+    background-color: #78d3d0;
+    font-size: 1em;
+    width: 100%; /* cal(100 - 43%)*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-42px);
+}
+
+.campo > input:focus-within {
+    background-color: white;
 }
 
 input[type="submit"]{
